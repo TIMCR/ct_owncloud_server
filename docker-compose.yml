@@ -58,8 +58,8 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - mysql:/var/lib/mysql
-      - backup:/var/lib/backup
+      - mysql:/mnt/mysql
+      - backup:/mnt/backup
 
   redis:
     image: webhippie/redis:latest
@@ -72,4 +72,4 @@ services:
       timeout: 10s
       retries: 5
     volumes:
-      - redis:/var/lib/redis
+      - redis:/mnt/redis
